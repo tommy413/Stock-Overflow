@@ -159,7 +159,7 @@ def update():
         print("=== 假日不進行推播 ===")
         return
     else:
-        if helper.check_time_between(datetime.time(9,0), datetime.time(13,30)):
+        if helper.check_time_between(datetime.time(8,30), datetime.time(15,00)):
             print("=== 開始製作 [推薦買入] 股票清單 ===")
             buying_list = get_buying_list(yesterday_recommendations)
             # 若今日休市則不進行後續更新與推播
@@ -466,7 +466,7 @@ def get_buying_list(yesterday_recommendations) -> list:
 # (初始化時) 取得過去最新的推薦觀察股票清單
 def get_latest_recommendations():
     print("=== 取得最新 [推薦觀察] 股票清單 ===")
-    if helper.check_time_between(datetime.time(13,30), datetime.time(17,00)):
+    if helper.check_time_between(datetime.time(15,00), datetime.time(18,00)):
         print("=== 無需取得 [推薦觀察] 股票清單 ===")
         return
     final_date = datetime.date.today()
