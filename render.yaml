@@ -2,7 +2,7 @@ services:
 - type: web
   name: stock-overflow-api
   env: python
-  repo: https://github.com/yujunkuo/Stock-Overflow.git
+  repo: https://github.com/tommy413/Stock-Overflow.git
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn main:app
   plan: free
